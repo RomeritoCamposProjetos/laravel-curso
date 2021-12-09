@@ -1,23 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.dashboard.main')
+
+@section('main-content')
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Criar Tarefa</h1>
     
-    <h1>Criar  Tarefa</h1>
+</div>
 
-    <form action="{{ url('/tarefas/salvar') }}" method="POST">
-        @csrf
-        <input type="text" name="nome">
-        <input type="text" name="descricao">
-        <button type="submit">Enviar</button>
-    </form> 
+<div class="row">
+    <div class="col">
 
-    <a href="{{ route('tarefa.inicio') }}">Voltar</a>
+        <form action="{{ url('/tarefas/salvar') }}" method="POST">
+            @csrf
+            <input type="text" name="nome">
+            <input type="text" name="descricao">
+            <button type="submit">Enviar</button>
+        </form> 
 
-</body>
-</html>
+        <a href="{{ route('tarefa.inicio') }}">Voltar</a>
+
+    </div>
+</div>
+    
+@endsection

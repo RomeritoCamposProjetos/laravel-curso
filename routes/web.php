@@ -50,14 +50,6 @@ Route::get('/tarefas/mostrar/{id}' , function($id){
 });
 
 
-Route::get('/layout', function(){
-    return view('layout.layout');
-});
-
-Route::get('/layout/home', function(){
-    return view('usuario.home');
-});
-
-Route::get('/layout/create', function(){
-    return view('usuario.create');
+Route::get('/sbadmin', function(){
+    return view('layout.sbadmin');
 });
